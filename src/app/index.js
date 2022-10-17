@@ -8,7 +8,7 @@ app.use(
 );
 
 
-var cors = require('cors')
+var cors = require('cors');
 
 //cors
 app.use(cors())
@@ -16,7 +16,8 @@ app.use(cors())
 // Database-connection
 require('../utils/db')();
 
-app.use("/api/v1",rootRouter);
+
+app.use("/api/v1", rootRouter);
 
 
 module.exports = app;
