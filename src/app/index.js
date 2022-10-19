@@ -11,7 +11,9 @@ app.use(
 var cors = require('cors');
 
 //cors
-app.use(cors())
+app.use(cors({
+  origin: '*'
+}))
 
 // Database-connection
 require('../utils/db')();

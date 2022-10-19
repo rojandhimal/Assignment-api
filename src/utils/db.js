@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 module.exports = () => {
-  mongoose.connect("mongodb+srv://tegs:techtegs1998@tegs.tyh8twj.mongodb.net/?retryWrites=true&w=majority", err => {
+  mongoose.connect(process.env.MONGO_DB, err => {
     if (err) {
       console.log(err);
       process.exit(1);
